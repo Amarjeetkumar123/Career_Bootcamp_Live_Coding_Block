@@ -19,7 +19,7 @@ public:
 			ans.push_back(nums[q.front]);
 
 			while (!q.empty() and q.front() <= i - k) {
-				q.pop_back(i);
+				q.pop_front(i);
 			}
 			while (!q.empty() and nums[i] >= nums[q.back()]) {
 				q.pop_back();
