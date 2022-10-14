@@ -22,14 +22,14 @@ int Flowers(int len, int k) {
 	if (len >= k) {
 		option2 = Flowers(len - k, k);//White Flower at the current index:
 	}
-	return dp[len] = option1 + option2;
+	return dp[len] = (option1 + option2)%mod;
 }
 
 void precompute() {
 	memset(dp, -1, sizeof(dp));
 	pre[0] = 0;
 
-	for (int i = 1; i < 10005; i++) {
+	for (int i = 1; i < 100001; i++) {
 		pre[i] = pre[i - 1] + Flowers(i, k);
 		pre[i] = pre[i] % mod;
 	}
