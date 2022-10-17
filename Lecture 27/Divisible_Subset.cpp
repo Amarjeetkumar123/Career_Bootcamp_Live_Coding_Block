@@ -16,7 +16,7 @@ public:
 			}
 		}
 		ans.push_back(nums[index]);
-		return ans;
+		return h[index] = ans;
 	}
 
 	vector<int> largestDivisibleSubset(vector<int>& nums) {
